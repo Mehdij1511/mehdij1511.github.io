@@ -27,7 +27,7 @@
 
     .hero {
         flex-direction: column;
-        padding: 10rem 6% 4rem;
+        padding: 12rem 7% 5rem;
         min-height: auto;
         text-align: center;
         align-items: center;
@@ -49,8 +49,8 @@
     .hero-image {
         position: static;
         transform: none;
-        margin-bottom: 2.5rem;
-        margin-top: 1rem;
+        margin-bottom: 3rem;
+        margin-top: 1.5rem;
         order: -1;
     }
 
@@ -136,7 +136,7 @@
     }
 
     .hero {
-        padding: 8rem 6% 3rem;
+        padding: 10rem 7% 4rem;
     }
 
     .hero-intro span {
