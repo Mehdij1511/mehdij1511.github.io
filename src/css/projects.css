@@ -7,6 +7,11 @@
     margin: 0 auto;
 }
 
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-card {
     background: var(--bg-white);
     padding: 2rem;
@@ -16,6 +21,7 @@
     border-top: 4px solid var(--primary-green);
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 .project-card:hover {
