@@ -14,6 +14,8 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
     border-top: 4px solid var(--primary-green);
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
