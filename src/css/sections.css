@@ -1,0 +1,29 @@
+/* Sections */
+section {
+    padding: 5rem 10%;
+    background: var(--bg-white);
+}
+
+section:nth-child(odd) {
+    background: var(--bg-light);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-green);
+}
+
+/* About Section */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}

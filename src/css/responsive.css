@@ -1,0 +1,38 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 6rem 5% 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .photo-placeholder {
+        width: 250px;
+        height: 320px;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    .contact-section {
+        padding: 3rem 5%;
+    }
+}

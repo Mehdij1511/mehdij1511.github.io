@@ -1,0 +1,42 @@
+/* Education & Experience */
+.timeline-item {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(45, 95, 63, 0.15);
+}
+
+.timeline-item h3 {
+    color: var(--primary-green);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item .institution {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item .period {
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.timeline-item ul {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    color: var(--text-gray);
+}
+
+.timeline-item ul li {
+    margin-bottom: 0.5rem;
+}
