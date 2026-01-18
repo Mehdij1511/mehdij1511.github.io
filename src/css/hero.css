@@ -8,6 +8,7 @@
     padding: 0 10%;
     background: var(--bg-light);
     position: relative;
+    z-index: 1;
 }
 
 .hero-content {
