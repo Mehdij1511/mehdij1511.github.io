@@ -1,0 +1,530 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image {
+        right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        top: 0.9rem;
+        width: calc(100% - 1.6rem);
+        padding: 0.85rem 1.4rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 0.35rem 0.6rem;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 12rem 7% 5rem;
+        min-height: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-intro {
+        justify-content: center;
+    }
+
+    .hero .subtitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-image {
+        position: static;
+        transform: none;
+        margin-bottom: 3rem;
+        margin-top: 1.5rem;
+        order: -1;
+    }
+
+    .photo-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 90%;
+        max-width: 300px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .signature {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    .contact-section {
+        padding: 3rem 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        padding: 1.5rem 0;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    nav {
+        top: 0.7rem;
+        width: calc(100% - 1.2rem);
+        padding: 0.75rem 1rem;
+        gap: 0.75rem;
+    }
+
+    nav ul {
+        gap: 0.7rem;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.4rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .theme-toggle {
+        width: 24px;
+        height: 24px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 10rem 5% 3rem;
+        min-height: unset;
+    }
+
+    .hero-intro {
+        gap: 0.6rem;
+    }
+
+    .hero-intro span {
+        font-size: 0.95rem;
+    }
+
+    .sparkle-icon {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .subtitle::after {
+        width: 100px;
+        height: 3px;
+    }
+
+    .photo-placeholder {
+        width: 160px;
+        height: 160px;
+    }
+
+    .signature {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .hero-buttons {
+        gap: 0.8rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .social-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .contact-intro {
+        font-size: 0.95rem;
+    }
+
+    .timeline-item {
+        padding: 1.2rem 0;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-item .institution {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item .period {
+        font-size: 0.85rem;
+    }
+
+    .timeline-item p, .timeline-item ul {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item ul {
+        margin-left: 1rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .project-tags {
+        gap: 0.4rem;
+    }
+
+    .tag {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .skill-category {
+        padding: 1rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .skill-category ul {
+        font-size: 0.9rem;
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        top: 0.6rem;
+        width: calc(100% - 0.8rem);
+        padding: 0.6rem 0.8rem;
+        column-gap: 0.5rem;
+    }
+
+    nav ul {
+        width: 100%;
+        gap: 0.5rem;
+        padding: 0.25rem 0.3rem;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.4rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .theme-toggle {
+        width: 22px;
+        height: 22px;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 9rem 5% 2.5rem;
+    }
+
+    .hero-intro {
+        gap: 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-intro span {
+        font-size: 0.85rem;
+    }
+
+    .sparkle-icon {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero .subtitle::after {
+        width: 80px;
+        height: 2px;
+    }
+
+    .photo-placeholder {
+        width: 140px;
+        height: 140px;
+    }
+
+    .photo-placeholder img {
+        width: 110%;
+        height: 110%;
+    }
+
+    .signature {
+        font-size: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .hero-buttons {
+        gap: 0.7rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 2rem 4%;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact-section {
+        padding: 2rem 4%;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .social-card {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-intro {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-item {
+        padding: 1rem 0;
+        margin-bottom: 0.8rem;
+    }
+
+    .timeline-item h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-item .institution {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .timeline-item .period {
+        font-size: 0.8rem;
+    }
+
+    .timeline-item p, .timeline-item ul {
+        font-size: 0.85rem;
+    }
+
+    .timeline-item ul {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .timeline-item li {
+        margin-bottom: 0.4rem;
+    }
+
+    .project-card {
+        padding: 1.2rem;
+        border-top: 3px solid var(--primary-green);
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .project-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .project-tags {
+        gap: 0.3rem;
+        margin-top: 0.8rem;
+    }
+
+    .tag {
+        padding: 0.25rem 0.6rem;
+        font-size: 0.7rem;
+    }
+
+    .skill-category {
+        padding: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .skill-category h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .skill-category ul {
+        font-size: 0.85rem;
+    }
+
+    .skill-category li {
+        margin-bottom: 0.3rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 1.5rem 4%;
+    }
+
+    .back-to-top {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
