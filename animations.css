@@ -1,0 +1,182 @@
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes lightSweep {
+    0% {
+        transform: translateX(-120%) skewX(-12deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.35;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateX(120%) skewX(-12deg);
+        opacity: 0;
+    }
+}
+
+@keyframes overlayExit {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    60% {
+        transform: translateY(-92%) scale(1.02);
+        opacity: 1;
+    }
+    85% {
+        transform: translateY(-110%) scale(1.01);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-120%) scale(1);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-18px) scale(1.04);
+    }
+}
+
+
+#welcome-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #0f1c15, #1f3b2b, #0a1210);
+    background-size: 200% 200%;
+    z-index: 9999;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    will-change: transform, opacity;
+    animation: gradientShift 10s ease infinite;
+}
+
+#welcome-overlay::before {
+    content: '';
+    position: absolute;
+    inset: -20% -40%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    opacity: 0;
+    animation: lightSweep 3.6s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#welcome-overlay.hide {
+    animation: overlayExit 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+body.welcome-active > :not(#welcome-overlay) {
+    opacity: 0;
+    transform: translateY(48px);
+    filter: blur(10px);
+}
+
+body.welcome-complete > :not(#welcome-overlay) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    transition: opacity 1.5s ease, transform 1.5s ease, filter 1.5s ease;
+}
+
+.welcome-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.welcome-orb {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 143, 94, 0.8), rgba(45, 95, 63, 0));
+    filter: blur(8px);
+    animation: orbFloat 6s ease-in-out infinite;
+}
+
+.welcome-orb.orb-1 {
+    top: 15%;
+    left: 12%;
+    animation-duration: 7.5s;
+}
+
+.welcome-orb.orb-2 {
+    bottom: 20%;
+    right: 10%;
+    width: 280px;
+    height: 280px;
+    animation-delay: 0.6s;
+    animation-duration: 8.5s;
+}
+
+.welcome-orb.orb-3 {
+    top: 55%;
+    left: 60%;
+    width: 180px;
+    height: 180px;
+    animation-delay: 1.2s;
+    animation-duration: 6.8s;
+}
+
