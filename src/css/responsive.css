@@ -9,6 +9,7 @@
     }
 }
 
+/* Tablet and large mobile devices */
 @media (max-width: 768px) {
     nav {
         top: 0.8rem;

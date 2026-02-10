@@ -24,17 +24,30 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
         hamburger.setAttribute('aria-expanded', !isExpanded);
         navLinks.classList.toggle('active');
     });
 
+    // Close menu when clicking a link
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('nav')) {
             hamburger.setAttribute('aria-expanded', 'false');
-            navLinks.classList.remove('active');
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
         }
     });
 }
