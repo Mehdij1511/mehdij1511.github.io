@@ -58,11 +58,7 @@
     }
 
     .hero-image {
-        position: static;
-        transform: none;
-        margin-bottom: 3rem;
-        margin-top: 1.5rem;
-        order: -1;
+        display: none;
     }
 
     .photo-placeholder {
