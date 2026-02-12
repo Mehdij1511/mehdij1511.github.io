@@ -152,6 +152,10 @@
         padding: 0.3rem 0.4rem;
     }
 
+    .nav-links {
+        min-width: calc(100% - 1.2rem) !important;
+    }
+
     nav ul li a {
         font-size: 0.75rem;
         padding: 0.4rem 0.5rem;
@@ -329,9 +333,17 @@
         padding: 0.25rem 0.3rem;
     }
 
+    .nav-links {
+        min-width: calc(100% - 1.6rem) !important;
+    }
+
     nav ul li a {
-        font-size: 0.7rem;
-        padding: 0.35rem 0.4rem;
+        font-size: 0.75rem;
+        padding: 0.5rem 0.6rem;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+        word-break: break-word;
     }
 
     .logo {
