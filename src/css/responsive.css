@@ -42,6 +42,7 @@
         min-height: auto;
         text-align: center;
         align-items: center;
+        position: relative;
     }
 
     .hero-content {
@@ -58,7 +59,18 @@
     }
 
     .hero-image {
-        display: none;
+        display: block;
+        position: absolute;
+        right: -5%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
     }
 
     .photo-placeholder {
@@ -343,10 +355,6 @@
         overflow: hidden;
     }
 
-    .photo-placeholder {
-        display: none;
-    }
-
     nav ul li a {
         font-size: 0.75rem;
         padding: 0.5rem 0.6rem;
@@ -354,6 +362,21 @@
         overflow: visible;
         text-overflow: clip;
         word-break: break-word;
+    }
+
+    .hero-image {
+        display: block;
+        position: absolute;
+        right: -8%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
     }
 
     .logo {
@@ -368,6 +391,7 @@
 
     .hero {
         padding: 9rem 5% 2.5rem;
+        position: relative;
     }
 
     .hero-intro {
