@@ -292,6 +292,7 @@ nav a:hover {
         z-index: 999;
         width: auto;
         max-width: calc(100vw - 1.2rem);
+        overflow: hidden;
     }
 
     .nav-links.active {
