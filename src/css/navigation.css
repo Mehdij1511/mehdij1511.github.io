@@ -297,6 +297,7 @@ nav a:hover {
 
     .nav-links.active {
         display: flex !important;
+        border-radius: 0;
     }
 
     [data-theme="dark"] .nav-links {
