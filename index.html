@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehdi Jamali | Data Science & Business Analytics Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Mehdi Jamali, Master's student in Data Science & Business Analytics at NMBU. Exploring machine learning, applied deep learning, and simulations.">
+    <meta name="keywords"
+        content="Mehdi Jamali, Data Science, Business Analytics, NMBU, Oslo, Machine Learning, Python, Portfolio">
+    <meta name="author" content="Mehdi Jamali">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mehdi Jamali | Data Science">
+    <meta property="og:description"
+        content="Master's student in Data Science & Business Analytics based in Oslo, Norway.">
+    <!-- <meta property="og:image" content="link-to-preview-image.jpg"> -->
+    <!-- Placeholder for future sharing image -->
+
+    <!-- Favicon (Original Brand Logo) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">MJ.</a>
+        <ul class="nav-links">
+            <li><a href="#about" class="hover-target">About</a></li>
+            <li><a href="#projects" class="hover-target">Projects</a></li>
+            <li><a href="#contact" class="hover-target">Contact</a></li>
+        </ul>
+        <button class="mobile-toggle hover-target" id="mobile-toggle">Menu</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <main data-scroll-container>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title reveal-text">
+                    <span>Mehdi</span>
+                    <span>Jamali.</span>
+                </h1>
+                <div class="hero-bottom reveal-fade delay-2">
+                    <p class="hero-role">Data Science & Business Analytics</p>
+                    <p class="hero-location">Oslo, Norway</p>
+                    <a href="#contact" class="btn hover-target">Let's Talk <i class="ph ph-arrow-down-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container border-top pt-8">
+                <div class="grid-layout">
+                    <div class="col-left reveal-fade">
+                        <h2 class="section-label">( About )</h2>
+                        <div class="profile-image-wrapper mt-4">
+                            <img src="profile.jpg" alt="Mehdi Jamali" class="profile-img">
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <h3 class="statement-text reveal-fade delay-1">
+                            I believe data is a canvas. I use it to craft models and strategies that make business
+                            clearer and more connected. Analytical thinking is how I balance purpose and progress.
+                        </h3>
+                        <div class="bio-text mt-8 reveal-fade delay-2">
+                            <p>Currently pursuing a 5-year Master's degree in Data Science with a specialization in
+                                Business Analytics at NMBU. Born in 2003, based in Oslo.</p>
+                            <p class="mt-4">From independently managing operations as a service station attendant to
+                                lecturing as a Teaching Assistant for Introduction to Engineering Projects, I bring
+                                responsibility, leadership, and continuous learning to everything I do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline (Experience & Education) -->
+        <section class="section" id="timeline">
+            <div class="container border-top pt-8">
+                <div class="grid-layout">
+                    <div class="col-left reveal-fade">
+                        <h2 class="section-label">( Journey )</h2>
+                    </div>
+                    <div class="col-right">
+                        <div class="timeline-container">
+                            <!-- Timeline Line -->
+                            <div class="timeline-rail"></div>
+
+                            <!-- Category: Education -->
+                            <div class="timeline-category reveal-fade">Education</div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-graduation-cap"></i> Data Science &
+                                            Business Analytics</h4>
+                                        <span class="timeline-meta">2023 — 2028 (Ongoing)</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">Norwegian University of Life Sciences (NMBU)</h5>
+                                    <p class="timeline-desc">Integrated Master of Science in Engineering program
+                                        covering data science, machine learning, business analytics, and statistical
+                                        modeling.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-books"></i> Specialization in Science
+                                        </h4>
+                                        <span class="timeline-meta">2019 — 2022</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">IT, Mathematics (R1+R2), Chemistry, Physics</h5>
+                                    <p class="timeline-desc">Built a strong analytical foundation preparing for advanced
+                                        engineering and computational studies.</p>
+                                </div>
+                            </div>
+
+                            <!-- Category: Experience -->
+                            <div class="timeline-category mt-8 reveal-fade">Experience</div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-gas-pump"></i> Service Station
+                                            Attendant</h4>
+                                        <span class="timeline-meta">Nov 2022 — Present</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">Circle K</h5>
+                                    <p class="timeline-desc">Independently managed station operations, developing
+                                        efficiency, problem-solving, and stress management.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-briefcase"></i> Chairperson &
+                                            Marketing Manager</h4>
+                                        <span class="timeline-meta">Feb 2024 — Feb 2026</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">DataSci NMBU</h5>
+                                    <p class="timeline-desc">Managed association activities, outreach, and organized
+                                        data science initiatives within the university community.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-chalkboard-teacher"></i> Teaching
+                                            Assistant</h4>
+                                        <span class="timeline-meta">Aug 2024</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">NMBU (IMRT100 - Introduction to Engineering Project)</h5>
+                                    <p class="timeline-desc">Supported teaching data analysis and communicating complex
+                                        analytical concepts to students.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-users"></i> Chairperson & Former
+                                            Deputy Chair</h4>
+                                        <span class="timeline-meta">Jan 2021 — Jan 2024</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">Alna AUF</h5>
+                                    <p class="timeline-desc">Organized political campaigns and represented the youth
+                                        organization at the regional board level.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item reveal-fade">
+                                <div class="timeline-node"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h4 class="timeline-title"><i class="ph ph-wrench"></i> Maintenance Worker</h4>
+                                        <span class="timeline-meta">Jul 2021 — Aug 2021</span>
+                                    </div>
+                                    <h5 class="timeline-subtitle">Oslo Municipality (Alna District)</h5>
+                                    <p class="timeline-desc">Conducted maintenance and improvement work including
+                                        renovation, painting, and cleaning at clubhouses.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <div class="container border-top pt-8">
+                <div class="grid-layout">
+                    <div class="col-left reveal-fade">
+                        <h2 class="section-label">( Stack )</h2>
+                    </div>
+                    <div class="col-right">
+                        <div class="skills-grid reveal-fade delay-1">
+                            <span class="skill-pill"><i class="ph ph-code"></i> Python</span>
+                            <span class="skill-pill"><i class="ph ph-brain"></i> TensorFlow</span>
+                            <span class="skill-pill"><i class="ph ph-table"></i> Pandas / NumPy</span>
+                            <span class="skill-pill"><i class="ph ph-chart-line-up"></i> Scikit-Learn</span>
+                            <span class="skill-pill"><i class="ph ph-infinity"></i> Julia</span>
+                            <span class="skill-pill"><i class="ph ph-database"></i> MySQL</span>
+                            <span class="skill-pill outlined"><i class="ph ph-book-open"></i> R (Learning)</span>
+                        </div>
+                        <div class="skills-grid mt-4 reveal-fade delay-2">
+                            <span class="skill-pill dark"><i class="ph ph-chart-bar"></i> Data Analysis</span>
+                            <span class="skill-pill dark"><i class="ph ph-briefcase"></i> Business Analytics</span>
+                            <span class="skill-pill dark"><i class="ph ph-puzzle-piece"></i> Problem Solving</span>
+                            <span class="skill-pill dark"><i class="ph ph-users-three"></i> Leadership</span>
+                            <span class="skill-pill dark"><i class="ph ph-translate"></i> Norwegian / English /
+                                Persian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="container border-top pt-8">
+                <div class="grid-layout">
+                    <div class="col-left reveal-fade">
+                        <h2 class="section-label">( Selected Works )</h2>
+                    </div>
+                    <div class="col-right">
+                        <div class="projects-list">
+                            <!-- Project 1 -->
+                            <a href="#" class="project-row hover-target reveal-fade">
+                                <div class="project-row-info">
+                                    <h3 class="project-name">Oil Spill Simulation</h3>
+                                    <p class="project-tags">Python, Mathematics, Sim</p>
+                                </div>
+                                <div class="project-row-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                            </a>
+                            <div class="project-row-details">
+                                <p>A Python-based simulation framework modeling the dynamics of oil spills over a 2D
+                                    domain. Involves creating a computational mesh of triangular and linear elements to
+                                    model oil flow and interactions with velocity fields.</p>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <a href="https://github.com/Mehdij1511/DAT300---Applied-Deep-Learning" target="_blank"
+                                class="project-row hover-target reveal-fade delay-1">
+                                <div class="project-row-info">
+                                    <h3 class="project-name">Applied Deep Learning</h3>
+                                    <p class="project-tags">TensorFlow, Neural Networks</p>
+                                </div>
+                                <div class="project-row-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                            </a>
+                            <div class="project-row-details">
+                                <p>Collection of course assignments (CAs) from DAT300 - Applied Deep Learning course.
+                                    Practical implementations and theoretical work.</p>
+                            </div>
+
+                            <!-- Project 3 -->
+                            <a href="#" class="project-row hover-target reveal-fade delay-2">
+                                <div class="project-row-info">
+                                    <h3 class="project-name">Deep Learning Research</h3>
+                                    <p class="project-tags">Computer Vision, Optimization</p>
+                                </div>
+                                <div class="project-row-arrow"><i class="ph ph-arrow-up-right"></i></div>
+                            </a>
+                            <div class="project-row-details">
+                                <p>Implemented neural network architectures for image classification, achieving high
+                                    accuracy on benchmark datasets through standard optimization techniques and
+                                    hyperparameter tuning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer class="footer section" id="contact">
+            <div class="container border-top pt-8 pb-8">
+                <div class="footer-huge-text reveal-fade">
+                    <h2><a href="mailto:Cyrgold@gmail.com" class="hover-target">Cyrgold@gmail.com</a></h2>
+                </div>
+                <div class="footer-bottom mt-8 reveal-fade delay-1">
+                    <p>© 2026 Mehdi Jamali</p>
+                    <div class="footer-links">
+                        <a href="https://www.linkedin.com/in/mehdi-jamali-033a2b2a2/" target="_blank"
+                            class="hover-target"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+                        <a href="https://github.com/Mehdij1511" target="_blank" class="hover-target"><i
+                                class="ph ph-github-logo"></i> GitHub</a>
+                        <a href="tel:+4791650518" class="hover-target"><i class="ph ph-phone"></i> +47 916 50 518</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
