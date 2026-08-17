@@ -539,10 +539,15 @@ ul {
 /* ==========================================================================
    Footer
    ========================================================================== */
+/* Make the footer email smaller and allow wrapping to avoid overflow */
 .footer-huge-text h2 {
-    font-size: clamp(3rem, 8vw, 8rem);
+    font-size: clamp(1.5rem, 6vw, 4.5rem);
     font-weight: 800;
     letter-spacing: -0.04em;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .footer-bottom {
@@ -618,5 +623,11 @@ ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
+    }
+
+    /* reduce footer email further on small screens to prevent it from sticking out */
+    .footer-huge-text h2 {
+        font-size: clamp(1.1rem, 8vw, 3rem);
+        line-height: 1.05;
     }
 }
