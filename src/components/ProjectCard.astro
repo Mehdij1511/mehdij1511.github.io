@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const metric = project.data.metrics[0];
+---
+
+<a
+  href={`/projects/${project.id}/`}
+  class="project-row"
+  aria-label={`${project.data.title} — view project details`}
+>
+  <div class="project-row__content">
+    <p class="project-row__meta mono">{project.data.course} · {project.data.year}</p>
+    <h3>{project.data.title}</h3>
+    <p>{project.data.tagline}</p>
+    <span class="project-row__action">View case study <span aria-hidden="true">↗</span></span>
+  </div>
+  {project.data.cover ? (
+    <figure class="project-row__visual">
+      <img src={project.data.cover} alt={`${project.data.title} project`} />
+    </figure>
+  ) : (
+    <div
+      class="project-row__graphic"
+      style={`--project-accent: ${project.data.accent}`}
+      aria-hidden="true"
+    >
+      <span class="project-row__graphic-meta mono">{project.data.course}</span>
+      <strong>{metric?.value ?? project.data.year}</strong>
+      <span class="project-row__graphic-label">{metric?.label ?? project.data.role}</span>
+    </div>
+  )}
+</a>

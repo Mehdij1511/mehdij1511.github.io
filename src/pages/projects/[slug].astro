@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Base title={entry.data.title} description={entry.data.tagline}>
+  <section class="section grid-12">
+    <div class="section-head">
+      <h2 class="label"><span class="num">01</span> <span class="dot"></span> Overview</h2>
+    </div>
+    {entry.data.cover && (
+      <img src={entry.data.cover} alt={`${entry.data.title} cover`} class="panel" />
+    )}
+    <div class="prose"><Content /></div>
+    {entry.data.stack.length > 0 && (
+      <div>
+        <h3 class="fs-sm mono">Tech stack</h3>
+        <ul class="chips">
+          {entry.data.stack.map((item) => (
+            <li class="chip">{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+    {entry.data.metrics.length > 0 && (
+      <div>
+        <h3 class="fs-sm mono">Metrics</h3>
+        <ul class="chips">
+          {entry.data.metrics.map((metric) => (
+            <li class="chip">{metric.value} – {metric.label}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+    <a class="btn btn--ghost" href={entry.data.repo} target="_blank" rel="noopener">Repo ↗</a>
+  </section>
+</Base>

@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../data/site';
+import { getCollection } from 'astro:content';
+
+// Fetch a few featured projects (e.g., first 3)
+const projects = (await getCollection('projects'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
+---
+<Base title="Home" description={site.description}>
+  <section class="hero section grid-12">
+    <div class="hero__content">
+      <h1 class="lede">{site.name}</h1>
+      <p class="fs-lg" style="margin-top:1rem;">{site.role}</p>
+      <p class="fs-md" style="margin-top:0.5rem; max-width:45ch;">{site.statement}</p>
+      <a class="btn btn--signal" href="#work">See my work</a>
+    </div>
+    <figure class="hero__visual">
+      <img src="/images/profile.jpg" alt="Portrait of Mehdi Jamali" class="panel" />
+    </figure>
+  </section>
+
+  <section id="work" class="section grid-12">
+    <div class="section-head">
+      <h2 class="label"><span class="num">01</span> <span class="dot"></span> Work</h2>
+    </div>
+    <ul class="project-list">
+      {projects.map((proj) => (
+        <li>
+          <ProjectCard project={proj} />
+        </li>
+      ))}
+    </ul>
+    <a class="btn btn--ghost" href="/projects/">All projects →</a>
+  </section>
+
+  <section id="about" class="section grid-12">
+    <div class="section-head">
+      <h2 class="label"><span class="num">02</span> <span class="dot"></span> About</h2>
+    </div>
+    <p class="prose">{site.bio.join(' ')}</p>
+    <a class="btn btn--ghost" href="/about/">Read more →</a>
+  </section>
+</Base>

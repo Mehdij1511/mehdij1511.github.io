@@ -1,0 +1,78 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="footer__top">
+      <span class="label reveal"><span class="dot"></span><span class="num">05</span> Contact</span>
+      <h2 class="footer__title reveal" data-delay="1">Let's build something<br /><span>that matters.</span></h2>
+      <a href={`mailto:${site.email}`} class="footer__mail reveal" data-delay="2" id="footer-email">
+        {site.email}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+
+    <div class="footer__grid">
+      <div>
+        <span class="label">Elsewhere</span>
+        <ul>
+          <li><a class="ulink" id="footer-linkedin" href={site.linkedin} target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="ulink" id="footer-github" href={site.github} target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="ulink" id="footer-cv" href={site.cv} target="_blank" rel="noopener">Curriculum Vitae</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Direct</span>
+        <ul>
+          <li><a class="ulink" id="footer-phone" href={site.phoneHref}>{site.phone}</a></li>
+          <li>{site.location}</li>
+        </ul>
+      </div>
+      <div class="footer__clock">
+        <span class="label">Local time — Oslo</span>
+        <span class="mono clock" id="oslo-clock">--:--</span>
+      </div>
+    </div>
+
+    <div class="footer__base mono">
+      <span>© {year} {site.name}</span>
+      <span>Less, but better.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const el = document.getElementById('oslo-clock');
+  const tick = () => {
+    if (el) el.textContent = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(new Date());
+  };
+  tick(); setInterval(tick, 1000);
+</script>
+
+<style>
+  .footer { background: var(--ink); color: var(--paper); padding-block: clamp(5rem, 12vw, 10rem) 2rem; margin-top: 0; }
+  .footer .label { color: #8d8a83; }
+  .footer .label .num { color: var(--paper); }
+  .footer__top { display: grid; gap: 2rem; padding-bottom: clamp(4rem, 8vw, 7rem); }
+  .footer__title { font-size: var(--fs-2xl); letter-spacing: -0.045em; }
+  .footer__title span { color: #77746d; }
+  .footer__mail {
+    display: inline-flex; align-items: center; gap: 1rem; width: fit-content;
+    font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500; letter-spacing: -0.03em;
+    border-bottom: 2px solid var(--signal); padding-bottom: .25rem;
+    transition: color .3s, gap .5s var(--ease);
+    word-break: break-all;
+  }
+  .footer__mail svg { width: .8em; height: .8em; flex: none; }
+  .footer__mail:hover { color: var(--signal); gap: 1.4rem; }
+
+  .footer__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-block: 2.5rem; border-top: 1px solid #2c2c2a; }
+  .footer__grid ul { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .5rem; }
+  .footer__clock { display: flex; flex-direction: column; gap: 1rem; }
+  .clock { font-size: var(--fs-lg); color: var(--paper); }
+
+  .footer__base { display: flex; justify-content: space-between; padding-top: 2rem; border-top: 1px solid #2c2c2a; font-size: var(--fs-xs); color: #77746d; text-transform: uppercase; letter-spacing: .08em; }
+
+  @media (max-width: 720px) { .footer__grid { grid-template-columns: 1fr 1fr; } .footer__clock { grid-column: 1 / -1; } }
+</style>
