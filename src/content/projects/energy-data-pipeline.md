@@ -1,19 +1,19 @@
 ---
 title: Energy Data Pipeline
-tagline: An end-to-end data engineering and analytics app for the Norwegian power system — from live APIs to Cassandra, Spark and MongoDB to an interactive Streamlit dashboard.
+tagline: An end-to-end Norwegian energy data pipeline that turns two public APIs into 60 monthly flow summaries across three connections and 25 months.
 course: IND320 · NMBU
 year: '2025'
 role: Developer — data engineering, analysis & app
-order: 3
+order: 2
 repo: https://github.com/Mehdij1511/IND320-Mehdij1511
 stack: [Python, Streamlit, Apache Spark, Cassandra, MongoDB, ENTSO-E API, NVE API, Plotly, pandas]
 coverKind: graphic
 accent: '#6d7a52'
 metrics:
   - { value: '2', label: 'Public energy APIs' }
-  - { value: '3', label: 'Storage / compute engines' }
-  - { value: '8', label: 'App pages' }
-  - { value: '24+', label: 'Months of flow data' }
+  - { value: '60', label: 'Monthly flow summaries' }
+  - { value: '3', label: 'Cross-border connections' }
+  - { value: '25', label: 'Months of data (Oct 2024–Oct 2026)' }
 ---
 
 ## The problem

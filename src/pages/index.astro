@@ -4,16 +4,18 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { site } from '../data/site';
 import { getCollection } from 'astro:content';
 
-// Fetch a few featured projects (e.g., first 3)
-const projects = (await getCollection('projects'))
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, 3);
+const projects = (await getCollection('projects')).sort((a, b) => {
+  if (a.data.title === 'Oil Spill Simulation') return -1;
+  if (b.data.title === 'Oil Spill Simulation') return 1;
+  return a.data.order - b.data.order;
+});
 ---
 <Base title="Home" description={site.description}>
   <section class="hero section grid-12">
     <div class="hero__content">
       <h1 class="lede">{site.name}</h1>
       <p class="fs-lg" style="margin-top:1rem;">{site.role}</p>
+      <p class="fs-sm mono" style="margin-top:0.5rem; color: var(--signal);">Open to internships and part-time roles</p>
       <p class="fs-md" style="margin-top:0.5rem; max-width:45ch;">{site.statement}</p>
       <a class="btn btn--signal" href="#work">See my work</a>
     </div>
@@ -33,7 +35,6 @@ const projects = (await getCollection('projects'))
         </li>
       ))}
     </ul>
-    <a class="btn btn--ghost" href="/projects/">All projects →</a>
   </section>
 
   <section id="about" class="section grid-12">

@@ -13,9 +13,9 @@ export const site = {
   description:
     "Mehdi Jamali — Master's student in Data Science & Business Analytics at NMBU, Oslo. Machine learning, deep learning, simulation and operations analytics.",
   statement:
-    'I turn data into clarity — building models and strategies that help organisations make better decisions.',
+    'Integrated M.Sc. engineering student in Data Science at NMBU, specialising in Business Analytics. Seeking internships and part-time roles in data science and analytics.',
   bio: [
-    "I'm an integrated Master's student in Data Science at the Norwegian University of Life Sciences (NMBU), specialising in Business Analytics, based in Oslo.",
+    "I'm an integrated Master's student in Data Science at the Norwegian University of Life Sciences (NMBU), specialising in Business Analytics, and I'm looking for internships and part-time roles in data analytics, business intelligence and applied machine learning.",
     'My work sits between complex datasets and strategic decisions: machine learning and deep learning, numerical simulation, data engineering pipelines and operations research. I care about models that can be explained, validated and acted on.',
     'Beyond the code, I bring leadership from chairing student and youth organisations, local-government experience as a deputy district council member, and the communication skills of a teaching assistant.',
   ],
@@ -50,39 +50,39 @@ export const experience: TimelineItem[] = [
     title: 'Deputy Representative',
     org: 'Alna District Council — Labour Party',
     period: '2023 — 2027',
-    desc: 'Deputy member (vararepresentant) of the district council, taking part in local governance and community initiatives.',
+    desc: 'Represent residents in district council work and contribute to local decisions and community initiatives.',
     current: true,
   },
   {
     title: 'Service Station Attendant',
     org: 'Circle K',
     period: 'Nov 2022 — Present',
-    desc: 'Independently run station operations — efficiency, problem-solving and calm under pressure.',
+    desc: 'Run day-to-day station operations independently, resolve customer and operational issues, and keep service running smoothly during shifts.',
     current: true,
   },
   {
     title: 'Chairperson & Marketing Manager',
     org: 'DataSci NMBU',
     period: 'Feb 2024 — Feb 2026',
-    desc: 'Led the student association: activities, outreach and data science initiatives across the university.',
+    desc: 'Led the student association’s activities and outreach, creating opportunities for students to connect around data science.',
   },
   {
     title: 'Teaching Assistant',
     org: 'NMBU — IMRT100 Introduction to Engineering Projects',
     period: 'Aug 2024',
-    desc: 'Supported teaching of data analysis and explained analytical concepts to first-year students.',
+    desc: 'Helped first-year students work through data analysis and engineering projects, translating technical concepts into practical guidance.',
   },
   {
     title: 'Chairperson & former Deputy Chair',
     org: 'Alna AUF',
     period: 'Jan 2021 — Jan 2024',
-    desc: 'Organised political campaigns and represented the youth organisation at regional board level.',
+    desc: 'Organised political campaigns, coordinated association activities, and represented members at regional board level.',
   },
   {
     title: 'Maintenance Worker',
     org: 'Oslo Municipality — Alna District',
     period: 'Jul — Aug 2021',
-    desc: 'Renovation, painting and upkeep of community clubhouses.',
+    desc: 'Renovated, painted, and maintained community clubhouses to keep shared spaces safe and usable for residents.',
   },
 ];
 

@@ -1,10 +1,10 @@
 ---
 title: Applied Deep Learning
-tagline: Four deep learning systems — image classification, pixel-level segmentation, generative modelling and sentiment analysis — built, diagnosed and explained.
+tagline: Four applied deep-learning tasks spanning image classification, pixel-level segmentation, generative modelling and sentiment analysis, with training diagnostics and model visualisations.
 course: DAT300 · NMBU
 year: '2025'
 role: Student — model design, training & interpretation
-order: 2
+order: 3
 repo: https://github.com/Mehdij1511/DAT300---Applied-Deep-Learning
 stack: [Python, TensorFlow / Keras, PyTorch, scikit-learn, NumPy, Matplotlib, Seaborn]
 cover: /projects/applied-deep-learning/seg_overlay.png

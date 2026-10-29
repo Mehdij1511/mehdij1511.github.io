@@ -1,12 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
+import { readdir } from 'node:fs/promises';
 import { site, education, experience, skills } from '../data/site';
+
+const galleryYears = ['2026', '2025', '2024'];
+const aboutGallery = await Promise.all(
+  galleryYears.map(async (year) => {
+    const files = await readdir(new URL(`../../public/images/about/all/${year}/`, import.meta.url));
+    return {
+      year,
+      photos: files
+        .filter((file) => file.endsWith('.webp') && !file.startsWith('Snapchat-'))
+        .sort()
+        .map((file, index) => ({
+          src: `/images/about/all/${year}/${file}`,
+          alt: `Personal photo ${index + 1} from ${year}`,
+        })),
+    };
+  })
+);
 ---
 <Base title="About" description="Learn more about Mehdi Jamali">
   <section class="section grid-12">
     <div class="section-head">
       <h2 class="label"><span class="num">01</span> <span class="dot"></span> Bio</h2>
     </div>
+    <p class="fs-sm mono" style="margin-bottom:1rem; color: var(--signal);">Open to internships and part-time roles</p>
     <p class="prose">{site.bio.join(' ')}</p>
   </section>
 
@@ -14,9 +33,16 @@ import { site, education, experience, skills } from '../data/site';
     <div class="section-head">
       <h2 class="label"><span class="num">02</span> <span class="dot"></span> Education</h2>
     </div>
-    <ul class="chips">
+    <ul class="timeline">
       {education.map((e) => (
-        <li class="chip">{e.title} – {e.org} ({e.period})</li>
+        <li class="timeline__item">
+          <div>
+            <h3 class="timeline__title">{e.title}</h3>
+            <p class="timeline__org">{e.org}</p>
+            <p class="timeline__desc">{e.desc}</p>
+          </div>
+          <span class="timeline__period">{e.period}</span>
+        </li>
       ))}
     </ul>
   </section>
@@ -25,9 +51,16 @@ import { site, education, experience, skills } from '../data/site';
     <div class="section-head">
       <h2 class="label"><span class="num">03</span> <span class="dot"></span> Experience</h2>
     </div>
-    <ul class="chips">
+    <ul class="timeline">
       {experience.map((e) => (
-        <li class="chip">{e.title} – {e.org} ({e.period})</li>
+        <li class="timeline__item">
+          <div>
+            <h3 class="timeline__title">{e.title}</h3>
+            <p class="timeline__org">{e.org}</p>
+            <p class="timeline__desc">{e.desc}</p>
+          </div>
+          <span class="timeline__period">{e.period}</span>
+        </li>
       ))}
     </ul>
   </section>
@@ -46,6 +79,26 @@ import { site, education, experience, skills } from '../data/site';
         </ul>
       </div>
     ))}
+  </section>
+
+  <section class="section grid-12">
+    <div class="section-head">
+      <h2 class="label"><span class="num">05</span> <span class="dot"></span> Life outside work</h2>
+    </div>
+    <div class="photo-years">
+      {aboutGallery.map(({ year, photos }) => (
+        <section class="photo-year" aria-labelledby={`photo-year-${year}`}>
+          <h3 class="photo-year__heading" id={`photo-year-${year}`}>{year}</h3>
+          <div class="photo-gallery">
+            {photos.map((photo) => (
+              <figure class="photo-gallery__item">
+                <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
   </section>
 
   <section class="section grid-12">

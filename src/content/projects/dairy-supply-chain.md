@@ -4,14 +4,14 @@ tagline: Linear programming, routing heuristics and production levelling for TIN
 course: IND210 · NMBU
 year: '2026'
 role: Lead analyst — linear programming
-order: 4
+order: 1
 repo: https://github.com/Mehdij1511/Industrial-management-IND210
 stack: [Python, pandas, NumPy, SciPy, HiGHS, Google Routes API, GeoJSON]
 coverKind: graphic
 accent: '#f2b705'
 metrics:
-  - { value: '+9.7%', label: 'Daily contribution margin' }
-  - { value: '≈29.6k', label: 'NOK per day' }
+  - { value: '+9.7%', label: 'Estimated daily contribution margin' }
+  - { value: '≈29,625 NOK', label: 'Estimated benefit per day' }
   - { value: '2-opt', label: 'Routing heuristic' }
   - { value: '100%', label: 'Driver-rest compliance' }
 team: [Mehdi Jamali, Daniel Yang Tsan, Oliver Tschudi Madsen, Helena Liepina Vollestad, Victoria Wallin]

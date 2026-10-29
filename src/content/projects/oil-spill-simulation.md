@@ -1,10 +1,10 @@
 ---
 title: Oil Spill Simulation
-tagline: A mesh-based numerical model of how an oil slick spreads through a coastal bay — and how much of it reaches the fishing grounds.
+tagline: A triangular-mesh coastal oil-spill model that tracks dispersion over 500 time steps and estimates oil entering mapped fishing grounds.
 course: INF202 · NMBU
 year: '2024'
 role: Developer — modelling, simulation & visualisation
-order: 1
+order: 4
 repo: https://github.com/Mehdij1511/OilSpillSimulation-Project
 stack: [Python, NumPy, meshio, Matplotlib, OpenCV, TOML, pytest]
 cover: /projects/oil-spill-simulation/plot_0.250.png
