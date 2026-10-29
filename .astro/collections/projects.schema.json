@@ -1,0 +1,95 @@
+{
+  "$ref": "#/definitions/projects",
+  "definitions": {
+    "projects": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "course": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "repo": {
+          "type": "string",
+          "format": "uri"
+        },
+        "stack": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cover": {
+          "type": "string"
+        },
+        "coverKind": {
+          "type": "string",
+          "enum": [
+            "image",
+            "graphic"
+          ],
+          "default": "image"
+        },
+        "accent": {
+          "type": "string",
+          "default": "#e8590c"
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "team": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "tagline",
+        "course",
+        "year",
+        "role",
+        "order",
+        "repo",
+        "stack"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
