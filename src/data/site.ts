@@ -9,7 +9,7 @@ export const site = {
   phoneHref: 'tel:+4791650518',
   linkedin: 'https://www.linkedin.com/in/mehdi-jamali-033a2b2a2/',
   github: 'https://github.com/Mehdij1511',
-  cv: '/MehdiJamaliCV_EN_H26.pdf',
+  cv: '/CV-H26.pdf',
   description:
     "Mehdi Jamali — Master's student in Data Science & Business Analytics at NMBU, Oslo. Machine learning, deep learning, simulation and operations analytics.",
   statement:
